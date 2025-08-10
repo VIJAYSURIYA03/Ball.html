@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Color Changing Glowing Ball</title>
+  <style>
+    body {
+      margin: 0;
+      background: #040404;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .colorchange {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      animation: glow 4s linear infinite, move 4s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      0% {
+        background: rgb(229, 8, 8);
+        box-shadow: 0 0 30px rgb(16, 185, 215);
+      }
+      25% {
+        background: rgb(218, 218, 17);
+        box-shadow: 0 0 30px rgb(232, 177, 13);
+      }
+      50% {
+        background: white;
+        box-shadow: 0 0 30px white;
+      }
+      75% {
+        background: rgb(238, 11, 158);
+        box-shadow: 0 0 30px rgb(214, 11, 184);
+      }
+      100% {
+        background: rgb(0, 0, 243);
+        box-shadow: 0 0 30px rgb(102, 0, 255);
+      }
+    }
+
+    @keyframes move {
+      0% {
+        transform: translateX(-200px);
+      }
+      50% {
+        transform: translateX(200px);
+      }
+      100% {
+        transform: translateX(-200px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="colorchange"></div>
+</body>
+</html>
+
+   
